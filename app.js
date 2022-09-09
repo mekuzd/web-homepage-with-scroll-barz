@@ -63,7 +63,7 @@ scrollLinks.forEach((link) => {
     e.preventDefault();
     // navigate to specific spot
     const id = e.target.getAttribute("href").slice(1);
-    // or  const id = e.target.innerHtml;
+    //or  const id = e.target.innerHtml
 
     const element = document.getElementById(id);
     const navHeight = navbar.getBoundingClientRect().height;
@@ -80,8 +80,8 @@ scrollLinks.forEach((link) => {
     window.scrollTo({
       top: position,
     });
-    // close
+
     linksContainer.style.height = 0;
   });
 });
-// calculate heights
+
