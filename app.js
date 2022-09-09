@@ -14,6 +14,9 @@ const linksContainer = document.querySelector(".links-container");
 const links = document.querySelector(".links");
 
 navToggle.addEventListener("click", function () {
+  // th ne classlist method was ignored cos more links could be added to the links container so 
+  //we would rather make the heiht adjust with the height of the links <li>
+  // the getBoundingClientRect() returns an object for a html element, the height property was gotten from it. 
   // linksContainer.classList.toggle("show-links");
 
   const linksHeight = links.getBoundingClientRect().height;
@@ -23,7 +26,7 @@ navToggle.addEventListener("click", function () {
   } else {
     linksContainer.style.height = 0;
   }
-  // console.log(linksContainer.getBoundingClientRect());
+
 });
 
 // ********** fixed navbar ************
@@ -42,8 +45,6 @@ window.addEventListener("scroll", function () {
   // setup back to top link
 
   if (scrollHeight > 500) {
-    console.log("helo");
-
     topLink.classList.add("show-link");
   } else {
     topLink.classList.remove("show-link");
