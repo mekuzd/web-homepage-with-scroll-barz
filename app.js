@@ -80,7 +80,8 @@ scrollLinks.forEach((link) => {
     window.scrollTo({
       top: position,
     });
-
+    // this was done when the toggle icon gets acivated on a smaller sreen  i.e the link contgainer height becomes zero \
+    //and disappears
     linksContainer.style.height = 0;
   });
 });
